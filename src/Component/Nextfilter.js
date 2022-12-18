@@ -1,5 +1,4 @@
 import { useMemo, useRef, useState } from "react"
-
 function Filterm() {
   const [items, setItems] = useState([])
   const [query, setQuery] = useState("")
@@ -25,21 +24,28 @@ function Filterm() {
 
   return (
     <>
-      Search:
-      <input
-        value={query}
+    <span>Anubhav Simple app</span>
+    <br></br>
+    <label class="custom-field three">
+  <input value={query}
         onChange={e => setQuery(e.target.value)}
-        type="search"
-      />
-      <br />
-      <br />
+        type="search" placeholder="&nbsp;"/>
+  <span class="placeholder">Search</span>
+  <span class="border"></span>
+</label>
+
       <form onSubmit={onSubmit}>
-        New Item: <input ref={inputRef} type="text" />
-        <button type="submit">Add</button>
+
+      <label class="custom-field three">
+  <input ref={inputRef} type="text" placeholder="&nbsp;"/>
+  <span class="placeholder">New Item:</span>
+  <span class="border"></span>
+</label>
+        <button class="button" type="submit">Add</button>
       </form>
       <h3>Items:</h3>
       {filteredItems.map(item => (
-        <div>{item}</div>
+        <div><button class="button">{item}</button></div>
       ))}
     </>
   )
