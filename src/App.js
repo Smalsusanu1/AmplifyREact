@@ -1,11 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
+import Filterm from './Component/Nextfilter';
 
 function App() {
   return (
-    <div className="App">
-     Anubhav Shukla Application
-    </div>
+    <React.StrictMode>
+      Anubhav Simple app
+    <Filterm />
+  </React.StrictMode>
   );
 }
 
